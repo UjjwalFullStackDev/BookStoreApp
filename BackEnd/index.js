@@ -20,7 +20,7 @@ const URI = process.env.MongoDBURI;
 try{
     mongoose.connect(URI,{
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
     });
     console.log("Connect to MongoDB")
 }catch(error){
@@ -33,4 +33,4 @@ app.use("/user", userRoute)
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`)
-})
+});
